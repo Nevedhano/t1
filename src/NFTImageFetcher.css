@@ -1,0 +1,208 @@
+/* Body and general styles */
+body {
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    margin-top: 20px;
+    min-height: 100vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Header styles */
+.header {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.connect-button-container {
+    margin-left: auto;
+}
+
+.connect-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.connect-button:hover {
+    background-color: #2980b9;
+}
+
+/* Tabs styles */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: transparent;
+    color: #3498db;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.tabs button.active-tab {
+    background-color: #3498db;
+    color: white;
+    border-bottom: 2px solid #2980b9;
+}
+
+.tabs button:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* Content section styles */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Mint, My NFTs, and Minted NFTs sections styles */
+.mint-section,
+.user-nfts,
+.minted-nfts {
+    flex: 1;
+    margin: 0 10px;
+    max-height: calc(100vh - 280px);
+    overflow-y: auto;
+}
+
+/* Mint section styles */
+.mint-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 0 10px;
+}
+
+.mint-section input[type="file"],
+.mint-section input[type="number"] {
+    width: 40%; /* Set a consistent width */
+    padding: 10px; /* Add padding for better touch targets */
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #ccc; /* Add border for visibility */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for readability */
+}
+
+.mint-button {
+    background-color: #3498db; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.mint-button:hover {
+    background-color: #2980b9; /* Hover color */
+}
+
+/* NFT item styles */
+.user-nft,
+.minted-nft {
+    width: calc(33.33% - 20px); /* Three items in a row with margins */
+    margin: 5px; /* Spacing between items */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    position: relative;
+}
+
+.user-nft img,
+.minted-nft img {
+    width: 100%; /* Maintain full width */
+    height: auto; /* Auto height to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+.user-nft .details,
+.minted-nft .details {
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.user-nft .details p,
+.minted-nft .details p {
+    margin: 0;
+}
+
+.user-nft .details p.owner,
+.minted-nft .details p.owner {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px; /* Space between details and bottom */
+    padding: 5px 0; /* Padding for owner details */
+    border-top: 1px solid #ccc; /* Separator line */
+}
+
+.buy-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #2980b9;
+}
+
+/* Flex container for NFTs */
+.user-nfts,
+.minted-nfts {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+    justify-content: center; /* Center items evenly */
+    gap: 10px; /* Add gap between items */
+}
